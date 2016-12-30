@@ -1,0 +1,3 @@
+This is a game portal for kids
+It has two games, viz., Color Find & Classic Arcade
+When you click button with appropriate name, you can start playing that game
