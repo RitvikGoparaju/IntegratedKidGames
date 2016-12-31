@@ -4,7 +4,8 @@
 
 This all started as an *End-Sem project* during my 3rd semester *Java Programming* Course in *IIIT-Bangalore*. I then coded `Game` as well as `Color Find` programs. As I fell in love with this project, I, during the *semester-end holidays*, extended it to include `Classic Arcade` game to the application. I also refined the classes, which I created as part of my project. I made the entire application more modular, and more object oriented.
 
-##How to run the application?
+**How to run the application?**
+
 Please download the zip and then unzip all the folders and files. Use the executable jar file **IntegratedKidGames.jar** present in the **dist** folder to run the application.
 
 ##The Application Details
