@@ -54,3 +54,6 @@ The detailed `javadoc` is available [here] (https://ritvikgoparaju.github.io/Int
 **Main Portal**: ![Alt](https://ritvikgoparaju.github.io/IntegratedKidGamesJavaDoc/images-for-javadoc/main.jpg "Main")
 **Color Find**: ![Alt](https://ritvikgoparaju.github.io/IntegratedKidGamesJavaDoc/images-for-javadoc/colorfind.jpg "Color Find")
 **Classic Arcade**: ![Alt](https://ritvikgoparaju.github.io/IntegratedKidGamesJavaDoc/images-for-javadoc/classicarcade.jpg "Classic Arcade")
+
+###Another Appeal
+Please also visit [**Integrated Travel Portal** My C++ Project] (https://github.com/RitvikGoparaju/IntegratedTravelPortal "My C++ Project - *Extended*") **Thanks!**
