@@ -13,16 +13,34 @@ It has 4 packages as shown below:
 - integratedkidgames.main
 
 ###integratedkidgames
-It has the following `base` classes:
+It has the following classes:
 
-- **Game**: Game Base class
-- **GameFrame**: Game GUI Class
+- Game: Game `Base` class
+- GameFrame: Game GUI Class
 
 ###integratedkidgames.classicarcade
 It contains following classes:
 
-- 
-The detailed `javadoc` is available 
+- ClassicArcade - `Derived` class
+- ArrowKeyPanel
+- Image
+- MovingImage
+
+###integratedkidgames.colorfind
+It contains following class:
+
+- ColorFind - `Derived` class
+
+###integratedkidgames.main
+It contains following class:
+
+- Main - `Application Initiating` class
+
+**Note:**
+
+The detailed `javadoc` is available [here] (https://ritvikgoparaju.github.io/IntegratedKidGamesJavaDoc/)
+
+###Basic Class diagram & Screen-shots
 **Class Diagram**: ![Alt](https://ritvikgoparaju.github.io/IntegratedKidGamesJavaDoc/images-for-javadoc/classdiagram.jpg "Class Diagram")
 **Main Portal**: ![Alt](https://ritvikgoparaju.github.io/IntegratedKidGamesJavaDoc/images-for-javadoc/main.jpg "Main")
 **Color Find**: ![Alt](https://ritvikgoparaju.github.io/IntegratedKidGamesJavaDoc/images-for-javadoc/colorfind.jpg "Color Find")
