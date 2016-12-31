@@ -6,7 +6,9 @@ This all started as an *End-Sem project* during my 3rd semester *Java Programmin
 
 **How to run the application?**
 
-Please download the zip and then unzip all the folders and files. Use the executable jar file **IntegratedKidGames.jar** present in the **dist** folder to run the application.
+- Download the zipped application from the **master** branch of this repository.
+- Unzip all the folders and files. 
+- Use the executable jar file **IntegratedKidGames.jar** present in the **dist** folder to run the application.
 
 ##The Application Details
 It has 4 packages as shown below:
@@ -39,6 +41,9 @@ It contains following class:
 It contains following class:
 
 - Main - `Application Initiating` class
+
+###A Sincere Appeal
+Please offer your **feedback** to me at `gvkcritvik97@gmail.com` / `VenkataRitvik.Goparaju@iiitb.org`
 
 **Note:**
 
