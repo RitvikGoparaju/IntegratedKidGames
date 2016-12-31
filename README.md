@@ -2,8 +2,19 @@
 
 **Overview**
 
-This has started as an *end-sem project* during my 3rd semester Java Programming Course in *IIIT-Bangalore* with `Color Find` game. During the *semester-end holidays*, I extended it to include `Classic Arcade` game. I also refined the classes which I created as part of my project. I made it more modular and more object oriented.
+This all started as an *End-Sem project* during my 3rd semester *Java Programming* Course in *IIIT-Bangalore*. I then coded `Game` as well as `Color Find` programs. As I fell in love with this project, I, during the *semester-end holidays*, extended it to include `Classic Arcade` game to the application. I also refined the classes which I created as part of my project. I made the entire application more modular and more object oriented.
 
+##Application Details
+It has 4 packages as shown below:
+
+- integratedkidgames
+- integratedkidgames.classicarcade
+- integratedkidgames.colorfind
+- integratedkidgames.main
+
+###integratedkidgames
+
+The detailed `javadoc` is available 
 **Class Diagram**: ![Alt](https://ritvikgoparaju.github.io/IntegratedKidGamesJavaDoc/images-for-javadoc/classdiagram.jpg "Class Diagram")
 **Main Portal**: ![Alt](https://ritvikgoparaju.github.io/IntegratedKidGamesJavaDoc/images-for-javadoc/main.jpg "Main")
 **Color Find**: ![Alt](https://ritvikgoparaju.github.io/IntegratedKidGamesJavaDoc/images-for-javadoc/colorfind.jpg "Color Find")
