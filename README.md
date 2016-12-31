@@ -13,7 +13,15 @@ It has 4 packages as shown below:
 - integratedkidgames.main
 
 ###integratedkidgames
+It has the following `base` classes:
 
+- **Game**: Game Base class
+- **GameFrame**: Game GUI Class
+
+###integratedkidgames.classicarcade
+It contains following classes:
+
+- 
 The detailed `javadoc` is available 
 **Class Diagram**: ![Alt](https://ritvikgoparaju.github.io/IntegratedKidGamesJavaDoc/images-for-javadoc/classdiagram.jpg "Class Diagram")
 **Main Portal**: ![Alt](https://ritvikgoparaju.github.io/IntegratedKidGamesJavaDoc/images-for-javadoc/main.jpg "Main")
