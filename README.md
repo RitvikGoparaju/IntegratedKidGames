@@ -1,4 +1,4 @@
-# IntegratedKidGames
+# Integrated Kid Games
 
 **Overview**
 
@@ -43,7 +43,7 @@ It contains following class:
 - Main - `Application Initiating` class
 
 ###A Sincere Appeal
-Please offer your **feedback** to me at `gvkcritvik97@gmail.com` / `VenkataRitvik.Goparaju@iiitb.org`
+Please offer your **feedback** to me at **`gvkcritvik97@gmail.com`** / **`VenkataRitvik.Goparaju@iiitb.org`**
 
 **Note:**
 
