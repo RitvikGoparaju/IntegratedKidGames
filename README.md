@@ -58,4 +58,4 @@ The detailed `javadoc` is available [here] (https://ritvikgoparaju.github.io/Int
 Please also visit [**Integrated Travel Portal** My C++ Project] (https://github.com/RitvikGoparaju/IntegratedTravelPortal "My C++ Project - *Extended*") **Thanks!**
 
 ###Gratitude
-My sincere thanks to Prof. Sujit Kumar Chakrabarti for the wonderful guidance, support and encouragement.
+My sincere thanks to **Prof. Sujit Kumar Chakrabarti** for the wonderful guidance, support and encouragement.
