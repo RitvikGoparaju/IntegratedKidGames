@@ -1,7 +1,7 @@
 # Integrated Kid Games
 **Overview**
 
-This all started as an *End-Sem project* during my 3rd semester *Java Programming* Course in *IIIT-Bangalore*. I then coded `Game` as well as `Color Find` programs. As I fell in love with this project, I, during the *semester-end holidays*, extended it to include `Classic Arcade` game to the application. I also refined the classes, which I created as part of my project. I made the entire application more modular, and more object oriented.
+This all started as the *End-Sem project* (During *Nov-2016*) - with the guidance of our revered professor, **Prof. Sujit Kumar Chakrabarti** - during my 3rd semester *Java Programming* Course in *IIIT-Bangalore*. I, during that period, coded `Game` as well as `Color Find` programs. As I fell in love with this project, I, during the *semester-end holidays* (*Dec-2016*), extended it to include `Classic Arcade` game to the application. I also refined the classes, which were created as part of my project. I made the entire application more modular, and more object oriented.
 
 **How to run the application?**
 
