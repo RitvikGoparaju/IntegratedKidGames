@@ -220,16 +220,17 @@ public class Game {
         String fileInstructionsName = nameWithoutSpaces + "Instructions.txt";
         File file = new File(fileInstructionsName);
         String instructionsHTML = "<html>"
-                + "<div style='color: white;'>"
-                + "<h3 align='center'>Instructions</h3>"
+                + "<div style='color: #204d74; overflow: scroll;'>"
+                + "<h2 align='center'>Instructions</h2>"
                 + "<hr></hr>"
-                + "<ul style='padding-left: 0; margin-left: 10px; list-style-type: none; color: white; list-style-position: inside; padding:0!important;'>";
+                + "<ul style='padding-left: 0; margin-left: 10px; list-style-type: none; list-style-position: inside; padding:0!important;'>";
         if (file.exists() && !file.isDirectory()) {
             try {
                 BufferedReader br = new BufferedReader(new FileReader(file));
                 String line;
                 while ((line = br.readLine()) != null) {
                     instructionsHTML = instructionsHTML + "<li'>" + line + "</li>";
+                    instructionsHTML = instructionsHTML + "<br>";
                 }
             } catch (FileNotFoundException ex) {
                 Logger.getLogger(Game.class.getName()).log(Level.SEVERE, null, ex);

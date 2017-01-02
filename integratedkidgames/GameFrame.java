@@ -116,63 +116,69 @@ public final class GameFrame {
         //Initializing buttons
         startButton = new JButton("START / RESTART");
         startButton.setPreferredSize(new Dimension(200, 50));
+        startButton.setBackground(new Color(32, 77, 116));
+        startButton.setForeground(Color.white);
 
         backButton = new JButton("EXIT");
         backButton.setPreferredSize(new Dimension(200, 50));
+        backButton.setBackground(new Color(32, 77, 116));
+        backButton.setForeground(Color.white);
 
         //Initializing labels
         headingLabel = new JLabel("Heading");
         headingLabel.setFont(new Font("Calibri", Font.PLAIN, 40));
-        headingLabel.setForeground(Color.blue);
+        headingLabel.setForeground(Color.white);
 
         labelInstructions = new JLabel();
 
         scoreLabel = new JLabel("Score");
         scoreLabel.setFont(new Font("Calibri", Font.PLAIN, 20));
-        scoreLabel.setForeground(Color.white);
+        scoreLabel.setForeground(new Color(32, 77, 116));
 
         actualScoreLabel = new JLabel();
         actualScoreLabel.setFont(new Font("Calibri", Font.PLAIN, 20));
-        actualScoreLabel.setForeground(Color.white);
+        actualScoreLabel.setForeground(new Color(32, 77, 116));
 
         timeLabel = new JLabel("Time Remaining (secs)");
         timeLabel.setFont(new Font("Calibri", Font.PLAIN, 20));
-        timeLabel.setForeground(Color.white);
+        timeLabel.setForeground(new Color(32, 77, 116));
 
         actualTimeLabel = new JLabel();
         actualTimeLabel.setFont(new Font("Calibri", Font.PLAIN, 20));
-        actualTimeLabel.setForeground(Color.white);
+        actualTimeLabel.setForeground(new Color(32, 77, 116));
 
         highScoreLabel = new JLabel("High Score");
         highScoreLabel.setFont(new Font("Calibri", Font.PLAIN, 20));
-        highScoreLabel.setForeground(Color.white);
+        highScoreLabel.setForeground(new Color(32, 77, 116));
 
         highScore = new JLabel();
         highScore.setFont(new Font("Calibri", Font.PLAIN, 20));
-        highScore.setForeground(Color.white);
+        highScore.setForeground(new Color(32, 77, 116));
 
-        message = new JLabel("Game Begun!");
+        message = new JLabel("");
         message.setFont(new Font("Calibri", Font.PLAIN, 20));
-        message.setForeground(Color.white);
+        message.setForeground(new Color(32, 77, 116));
 
         message.setFont(new Font("Calibri", Font.PLAIN, 20));
-        message.setForeground(Color.white);
+        message.setForeground(new Color(32, 77, 116));
 
         //Format the panels and labels
-        panelInitialize(headingPanel, Color.white, 0, 0, 1000, 100, "BoxY");
-        panelInitialize(instructionsPanel, Color.BLUE, 0, 100, 200, 600, "BoxY");
-        panelInitialize(gamePanel, Color.RED, 200, 100, 600, 600, "null");
-        panelInitialize(controlPanel, Color.BLUE, 800, 100, 200, 600, "BoxY");
-        panelInitialize(controlButtonPanel, Color.BLUE, 800, 100, 200, 200, "null");
-        panelInitialize(controlDisplayPanel, Color.BLUE, 800, 300, 200, 200, "BoxY");
-        panelInitialize(scoreLabelPanel, Color.BLUE, 800, 300, 200, 50, "null");
-        panelInitialize(scorePanel, Color.BLUE, 800, 350, 200, 50, "null");
-        panelInitialize(timeLabelPanel, Color.BLUE, 800, 400, 200, 50, "null");
-        panelInitialize(timePanel, Color.BLUE, 800, 450, 200, 50, "null");
-        panelInitialize(highScoreLabelPanel, Color.BLUE, 800, 400, 200, 50, "null");
-        panelInitialize(highScorePanel, Color.BLUE, 800, 450, 200, 50, "null");
-        panelInitialize(messagePanel, Color.BLUE, 800, 450, 200, 50, "null");
-        panelInitialize(controlBackPanel, Color.BLUE, 800, 500, 200, 50, "null");
+        panelInitialize(headingTopMarginPanel, new Color(32, 77, 116), 0, 0, 1000, 100, "null");
+        panelInitialize(headingPanel, new Color(32, 77, 116), 0, 0, 1000, 100, "BoxY");
+        panelInitialize(headingBottomMarginPanel, new Color(32, 77, 116), 0, 0, 1000, 100, "null");
+        panelInitialize(instructionsPanel, new Color(250, 250, 250), 0, 100, 200, 600, "BoxY");
+        panelInitialize(gamePanel, new Color(169, 169, 169), 200, 100, 600, 600, "null");
+        panelInitialize(controlPanel, new Color(250, 250, 250), 800, 100, 200, 600, "BoxY");
+        panelInitialize(controlButtonPanel, new Color(250, 250, 250), 800, 100, 200, 200, "null");
+        panelInitialize(controlDisplayPanel, new Color(250, 250, 250), 800, 300, 200, 200, "BoxY");
+        panelInitialize(scoreLabelPanel, new Color(250, 250, 250), 800, 300, 200, 50, "null");
+        panelInitialize(scorePanel, new Color(250, 250, 250), 800, 350, 200, 50, "null");
+        panelInitialize(timeLabelPanel, new Color(250, 250, 250), 800, 400, 200, 50, "null");
+        panelInitialize(timePanel, new Color(250, 250, 250), 800, 450, 200, 50, "null");
+        panelInitialize(highScoreLabelPanel, new Color(250, 250, 250), 800, 400, 200, 50, "null");
+        panelInitialize(highScorePanel, new Color(250, 250, 250), 800, 450, 200, 50, "null");
+        panelInitialize(messagePanel, new Color(250, 250, 250), 800, 450, 200, 50, "null");
+        panelInitialize(controlBackPanel, new Color(250, 250, 250), 800, 500, 200, 50, "null");
         gamePanel.setLayout(null);
         headingLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         startButton.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -248,7 +254,7 @@ public final class GameFrame {
             if (text_.equals("Game Over!")) {
                 message.setForeground(Color.red);
             } else {
-                message.setForeground(Color.green);
+                message.setForeground(new Color(0, 51, 0));
             }
         } else if (whichLabel.equals("HIGH-SCORE")) {
             label = highScore;
@@ -285,10 +291,12 @@ public final class GameFrame {
 
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 startButton.setBackground(Color.WHITE);
+                startButton.setForeground(new Color(32, 77, 116));
             }
 
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                startButton.setBackground(Color.GREEN);
+                startButton.setBackground(new Color(32, 77, 116));
+                startButton.setForeground(Color.white);
             }
         }
         );
@@ -296,10 +304,12 @@ public final class GameFrame {
         backButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 backButton.setBackground(Color.WHITE);
+                backButton.setForeground(new Color(32, 77, 116));
             }
 
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                backButton.setBackground(Color.GREEN);
+                backButton.setBackground(new Color(32, 77, 116));
+                backButton.setForeground(Color.white);
             }
         });
     }

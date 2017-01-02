@@ -78,6 +78,7 @@ public class ClassicArcade extends Game {
                 movingImages.get(0).setGameRunning();
                 movingImages.get(1).setGameRunning();
                 movingImages.get(2).setGameRunning();
+                gameFrame.setLabel("MESSAGE", "Game Begun!");
             }
         });
         

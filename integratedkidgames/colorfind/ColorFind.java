@@ -7,44 +7,41 @@ import java.awt.*;
 import java.util.Random;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 
 /**
  * This class is for the Game "Color Find". It extends "Game" Class
+ *
  * @author GVKC Ritvik, IIIT - Bengaluru
  */
 public class ColorFind extends Game {
+
     //Margin Panels
     private final JPanel topMarginPanel;
     private final JPanel colorFindPanel;
     //The basic panel that holds color buttons
     private JPanel colorPanel;
-    //The panels for Game instructions
-    private JPanel pLab = new JPanel();
-    private JPanel pLabInstructions;
-    private JPanel pLabInstructions1;
+    //The panels for Game Question
+    private JPanel pLabQuestion = new JPanel();
     //Color Buttons
     private JButton b1, b2, b3, b4;
-    //Labels for instructions
-    private JLabel lab;
-    private JLabel labInstructions;
-    private JLabel labInstructions1;
+    //Label for Question
+    private JLabel labQuestion;
     private String[] colours;
     private int randomNum1, randomNum2, randomNum3, randomNum4, answer;
 
     /**
-     *Constructor. Its parameters are same as for its super class
-     * @param name_ 
-     * @param nameWithoutSpaces_ 
+     * Constructor. Its parameters are same as for its super class
+     *
+     * @param name_
+     * @param nameWithoutSpaces_
      * @param timePeriodSecs_
      */
     public ColorFind(String name_, String nameWithoutSpaces_, int timePeriodSecs_) {
         super(name_, nameWithoutSpaces_, timePeriodSecs_);
+        gameRunning = false;
         this.colours = new String[]{"Blue", "Green", "Yellow", "Red", "Orange", "Black"};
-        this.labInstructions1 = new JLabel();
-        this.labInstructions = new JLabel();
-        this.lab = new JLabel();
-        this.pLabInstructions1 = new JPanel();
-        this.pLabInstructions = new JPanel();
+        this.labQuestion = new JLabel();
         this.colorPanel = new JPanel();
         this.colorFindPanel = new JPanel();
         this.topMarginPanel = new JPanel();
@@ -61,24 +58,16 @@ public class ColorFind extends Game {
         colorPanel.add(b2);
         colorPanel.add(b3);
         colorPanel.add(b4);
-        labInstructions.setText("Click on the color asked. Maximize your score in " + totalTime / 1000 + " seconds!");
-        labInstructions.setFont(new Font("Serif", Font.PLAIN, 14));
-        labInstructions1.setText("You'll get 100 for correct answer, and lose 50 for wrong answer");
-        labInstructions1.setFont(new Font("Serif", Font.PLAIN, 14));
-        pLabInstructions.add(labInstructions);
-        pLabInstructions1.add(labInstructions1);
         colorFindPanel.setSize(600, 600);
         colorFindPanel.setLayout(new BoxLayout(colorFindPanel, BoxLayout.Y_AXIS));
         colorFindPanel.add(colorPanel);
-        colorFindPanel.add(pLab);
-        colorFindPanel.add(pLabInstructions);
-        colorFindPanel.add(pLabInstructions1);
+        colorFindPanel.add(pLabQuestion);
         gameFrame.gamePanel.setLayout(new BoxLayout(gameFrame.gamePanel, BoxLayout.Y_AXIS));
         gameFrame.gamePanel.add(topMarginPanel);
         gameFrame.gamePanel.add(colorFindPanel);
         gameFrame.addControlPanel();
         gameFrame.frame.setVisible(true);
-        
+
         //For restarting the game
         gameFrame.startButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -93,7 +82,7 @@ public class ColorFind extends Game {
                 Main main = new Main();
             }
         });
-        
+
         //For allowing play of the game
         b1.addActionListener(new ActionListener() {
             @Override
@@ -125,7 +114,7 @@ public class ColorFind extends Game {
     }
 
     /**
-     *For creating the question of asking a randomly chosen color button
+     * For creating the question of asking a randomly chosen color button
      */
     public void createQuestion() {
         checkElapsedTime();
@@ -156,7 +145,7 @@ public class ColorFind extends Game {
     }
 
     /**
-     *Displaying the question along with color-buttons
+     * Displaying the question along with color-buttons
      */
     public void displayQuestion() {
 
@@ -165,34 +154,54 @@ public class ColorFind extends Game {
         setButtonColor(randomNum3, b3);
         setButtonColor(randomNum4, b4);
 
+        String question = "<html>Click on <strong><em>";
+
         if (answer == 0) {
-            lab.setText(colours[0]);
+            question = question + colours[0];
+            //lab.setText(colours[0]);
         } else if (answer == 1) {
-            lab.setText(colours[1]);
+            question = question + colours[1];
+            //lab.setText(colours[1]);
         } else if (answer == 2) {
-            lab.setText(colours[2]);
+            question = question + colours[2];
+            //lab.setText(colours[2]);
         } else if (answer == 3) {
-            lab.setText(colours[3]);
+            question = question + colours[3];
+            //lab.setText(colours[3]);
         } else if (answer == 4) {
-            lab.setText(colours[4]);
+            question = question + colours[4];
+            //lab.setText(colours[4]);
         } else if (answer == 5) {
-            lab.setText(colours[5]);
+            question = question + colours[5];
+            //lab.setText(colours[5]);
         }
 
-        pLab.add(lab);
+        question = question + "</em></strong>!</html>";
+
+        labQuestion.setText(question);
+        pLabQuestion.add(labQuestion);
+
     }
 
     /**
-     *To start/restart the game
+     * To start/restart the game
      */
     public void startGame() {
-        gameFrame.frame.dispose();
-        ColorFind colorFind = new ColorFind("Color Find", "ColorFind", 10);
-        colorFind.createQuestion();
+        gameRunning = true;
+        startTime = (new Date()).getTime();
+        score = 0;
+        gameFrame.setLabel("SCORE", "0");
+        startTime = System.currentTimeMillis();
+        elapsedTime = 0L;
+        totalTime = timePeriodSecs * 1000;
+        gameFrame.setLabel("TIME", String.valueOf(timePeriodSecs));
+        gameFrame.setLabel("MESSAGE", "Game Begun!");
+        this.createQuestion();
     }
 
     /**
-     *Checking the Answer
+     * Checking the Answer
+     *
      * @param answer_ The correct answer
      * @param randomNum_ The answer chosen by the player
      */
@@ -207,7 +216,8 @@ public class ColorFind extends Game {
     }
 
     /**
-     *Creating the appropriate colored button
+     * Creating the appropriate colored button
+     *
      * @param randomNum_ - randomly chosen color
      * @param b_ - button to be applied color to
      */

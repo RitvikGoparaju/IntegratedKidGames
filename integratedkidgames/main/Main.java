@@ -3,6 +3,7 @@ package integratedkidgames.main;
 import integratedkidgames.Game;
 import integratedkidgames.colorfind.ColorFind;
 import integratedkidgames.arcadegame.ClassicArcade;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -14,7 +15,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- * This is the Main class that initiates the portal. It extends Game class only for the sake of GUI Frame *
+ * This is the Main class that initiates the portal. It extends Game class only
+ * for the sake of GUI Frame
+ *
+ *
  * @author GVKC Ritvik, IIIT - Bengaluru
  */
 public class Main extends Game {
@@ -55,7 +59,11 @@ public class Main extends Game {
         container.add(p);
         container.add(pLab);
         b1.setPreferredSize(new Dimension(150, 100));
+        b1.setBackground(new Color(32, 77, 116));
+        b1.setForeground(Color.white);
         b2.setPreferredSize(new Dimension(150, 100));
+        b2.setBackground(new Color(32, 77, 116));
+        b2.setForeground(Color.white);
         p.add(b1);
         p.add(b2);
         gameFrame.gamePanel.add(container);
@@ -64,7 +72,6 @@ public class Main extends Game {
             public void actionPerformed(ActionEvent e) {
                 ColorFind cF = new ColorFind("Color Find", "ColorFind", 10);
                 gameFrame.frame.dispose();
-                cF.createQuestion();
             }
         });
         b2.addActionListener(new ActionListener() {
@@ -75,15 +82,17 @@ public class Main extends Game {
         });
 
         gameFrame.backButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 gameFrame.frame.dispose();
-                exit();
+                System.exit(0);
             }
         });
     }
 
     /**
-     *The portal starting main method
+     * The portal starting main method
+     *
      * @param args
      */
     public static void main(String args[]) {
