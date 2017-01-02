@@ -1,3 +1,8 @@
-This is a game portal for kids
-It has two games, viz., Color Find & Classic Arcade
-When you click button with appropriate name, you can start playing that game
+When ready, press the <strong><em>Start / Restart</em></strong> button
+Player can move <strong><em>left, right, up</em></strong> and <strong><em>down</em></strong> using <strong><em>the arrow-keys</em></strong>
+Enemies move in varying speeds on the paved block portion
+Once Player collides with enemy, he moves back to the start-square
+The goal of the player is reaching the other side. It <strong><em>fetches 10 points</em></strong>
+Player's collision with enemy results in <strong><em>forfeiting 5 points</em></strong>, and moving back to <strong><em>start square</em></strong>
+Game can be restarted by pressing the <strong><em>Start / Restart</em></strong> button.
+So, go ahead and maximize your score in the given time period, and try to outsmart the <strong><em>High-Score! GOOD LUCK!!!</em></strong>
